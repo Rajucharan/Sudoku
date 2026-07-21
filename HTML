@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Sudoku Validator</title>
+
+<script>
+
+function createGrid(){
+
+var size=document.getElementById("size").value;
+
+var board=document.getElementById("board");
+
+board.innerHTML="";
+
+for(var i=0;i<size;i++){
+
+for(var j=0;j<size;j++){
+
+board.innerHTML += "<input type='number' name='cell"+i+j+"' min='1' max='"+size+"' required style='width:40px;'>";
+
+}
+
+board.innerHTML+="<br>";
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Sudoku Validator</h2>
+
+<form method="POST">
+
+<select name="size" id="size" onchange="createGrid()">
+
+<option value="3">3 x 3</option>
+
+<option value="6">6 x 6</option>
+
+<option value="9">9 x 9</option>
+
+</select>
+
+<br><br>
+
+<div id="board"></div>
+
+<br>
+
+<input type="submit" value="Check Sudoku">
+
+</form>
+
+</body>
+
+</html>
