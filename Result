@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Result</title>
+
+</head>
+
+<body>
+
+{% if result %}
+
+<h1 style="color:green;">
+Sudoku is Correct
+</h1>
+
+{% else %}
+
+<h1 style="color:red;">
+Sudoku is Wrong
+</h1>
+
+{% endif %}
+
+<a href="/home">Try Again</a>
+
+</body>
+
+</html>
